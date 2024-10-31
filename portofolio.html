@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <style>
+        /* Styling Umum */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
+        .container { max-width: 800px; margin: auto; padding: 20px; text-align: center; }
+
+        /* Styling Header */
+        .header { display: flex; justify-content: space-between; padding: 1em 2em; background-color: #f1f1f1; }
+        .header h1 { font-size: 20px; }
+        .header nav a { margin: 0 10px; color: #333; text-decoration: none; font-weight: bold; cursor: pointer; }
+
+        /* Styling Profil */
+        .profil { margin-top: 40px; display: flex; align-items: center; text-align: left; gap: 20px; }
+        .profil img { border-radius: 50%; width: 200px; height: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); order: 2; } /* Gambar di kanan */
+        .profil .text { flex: 1; } /* Teks di kiri */
+        .profil h2 { font-size: 35px; color: #333; margin: 0; }
+        .profil p { color: #777; }
+
+        /* Styling Bagian Skills */
+        .skills { background-color: #f1f1f1; padding: 40px 0; text-align: center; margin-top: 40px; } /* Margin tambahan di atas */
+        .skills h2 { font-size: 24px; color: #333; margin-bottom: 20px; }
+        .skills-container { display: flex; justify-content: center; gap: 40px; margin-top: 20px; }
+        .skill { text-align: center; color: #007bff; }
+        .skill h3 { margin-top: 10px; color: #333; }
+        .skill p { color: #777; }
+        .skill-icon { font-size: 40px; color: #007bff; }
+
+        /* Styling Bagian Kontak */
+        .kontak { padding: 40px 0; background-color: #f1f1f1; text-align: center; margin-top: 40px; } /* Margin tambahan di atas */
+        .kontak h2 { font-size: 24px; color: #333; margin-bottom: 20px; }
+        .info-kontak { margin-top: 20px; display: flex; justify-content: center; gap: 40px; color: #777; }
+        .kontak-item { text-align: center; }
+        .kontak-item p { margin: 10px 0; }
+        .kontak-icon { font-size: 24px; color: #007bff; }
+
+        /* Styling Tombol */
+        .unduh-btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .unduh-btn:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <!-- Bagian Header -->
+    <div class="header">
+        <h1>Portofolio Akbar</h1>
+        <nav>
+            <a onclick="smoothScroll('#beranda')">Beranda</a>
+            <a onclick="smoothScroll('#skills')">Keahlian</a>
+            <a onclick="smoothScroll('#kontak')">Kontak</a>
+        </nav>
+    </div>
+
+    <!-- Bagian Profil -->
+    <div id="beranda" class="container profil">
+        <div class="text">
+            <h2>Muhammad Akbar Ihsan Hidayat</h2>
+            <p>Desainer Kreatif dari Indonesia</p>
+            <p>Saya seorang desainer dan pengembang yang berpengalaman lebih dari 3 tahun. Mari kita buat sesuatu yang menakjubkan bersama.</p>
+            <a href="#" class="unduh-btn">Unduh CV</a>
+        </div>
+        <img src="Muka.jpg" alt="Foto Profil">
+    </div>
+
+    <!-- Bagian Keahlian -->
+    <div id="skills" class="skills">
+        <h2>skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <i class="fas fa-code skill-icon"></i>
+                <h3>Pengembangan Web</h3>
+                <p>Mahir dalam HTML, CSS, JavaScript, dan desain responsif.</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-pencil-alt skill-icon"></i>
+                <h3>Desain UI/UX</h3>
+                <p>Menciptakan antarmuka yang ramah pengguna dan menarik secara visual.</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-paint-brush skill-icon"></i>
+                <h3>Desain Grafis</h3>
+                <p>Berpengalaman dengan Adobe Photoshop dan Illustrator.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Kontak -->
+    <div id="kontak" class="kontak">
+        <h2>contact</h2>
+        <div class="info-kontak">
+            <div class="kontak-item">
+                <i class="fas fa-envelope kontak-icon"></i>
+                <p>Email: m.akbarihsanhidayat12@gmail.com</p>
+            </div>
+            <div class="kontak-item">
+                <i class="fas fa-phone kontak-icon"></i>
+                <p>Telepon: +62 89521001771</p>
+            </div>
+            <div class="kontak-item">
+                <i class="fas fa-map-marker-alt kontak-icon"></i>
+                <p>Lokasi: Indonesia</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function smoothScroll(target) {
+            document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+s
